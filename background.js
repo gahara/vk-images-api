@@ -1,4 +1,3 @@
-/*global require, chrome, alert */
 "use strict";
 
  //getting value of the parameter from the given URL
