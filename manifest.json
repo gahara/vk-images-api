@@ -1,0 +1,16 @@
+{
+  "description": "",
+  "manifest_version": 2,
+  "name": "VkImages",
+  "permissions": [ "contextMenus", "tabs", "storage" , "http://*/", "https://*/" ],
+  "browser_action": {
+    "default_title": "vkD",
+    "default_popup": "popup.html"
+    },
+  "version": "9000",
+  "background": {
+    "scripts": [
+    "background.js"
+    ]
+  }
+}
