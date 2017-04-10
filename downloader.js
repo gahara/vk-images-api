@@ -20,28 +20,28 @@ function savePhoto(url){
   };
   xhr.open('GET', url);
   xhr.send();
-}
+};
 
 //Getting all photos from album, url should be provided 
 //Documentation:
 //https://vk.com/dev/photos.getAlbums
 function getPhotosFromAlbum(url){
   let xhr = new XMLHttpRequest();
-  let t;
+  let tmp;
   xhr.open('GET', url, false);
   xhr.onreadystatechange = function () {
         if(xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
-            t = xhr.responseText;
+            tmp = xhr.responseText;
         };
     };
 
   xhr.send();
 
-  let j = JSON.parse(t);
-  for (let i = 0; i < j.response.length; i++)
+  let jsonified = JSON.parse(tmp);
+  for (let i = 0; i < jsonified.response.length; i++)
   {
-    savePhoto(j.response[i].src_big);
-  }
+    savePhoto(jsonified.response[i].src_big);
+  };
   //console.log(j.response[0].src_big);
   //let t = xhr.responseText;
  //alert(t + 'WTFFFFFF????');
@@ -65,7 +65,7 @@ function getPhotosFromAlbum(url){
 //   // An error occurred
 // });
 
-}
+};
 
 
 //
@@ -74,7 +74,7 @@ function getPhotosFromAlbum(url){
 function getParams(url){ 
   let a = url.split('_')
   return 'https://api.vk.com/method/photos.get?owner_id=' + a[0]. replace(/[^0-9]/g, '') + '&album_id=' + a[1] + '&count=2';
-}
+};
 
 var urlFromStorage; //= chrome.storage.sync.get(['urlFromInput']) ;
 
