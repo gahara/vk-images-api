@@ -16,7 +16,7 @@ function getUrlParameterValue(url, parameterName) {
         }
     }
     return parameterValue;
-}
+};
 
 
   //tab update listener handler, returning  function which is used as a listener  by chrome.tabs.obUpdated
@@ -52,7 +52,7 @@ function listenerHandler(authTabId, imageSourceUrl) {
             }
         }
     };
-}
+};
 
 
 //functionality 'onlick' chrome context menu item method

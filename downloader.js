@@ -1,5 +1,3 @@
-//"use strict";
-
 //Downloads photo from url provided
 //example: 
 //savePhoto("https://pp.userapi.com/c10535/u39622205/95373066/y_276dd173.jpg");
